@@ -303,24 +303,17 @@
         <!--Editor Controller-->
         <scene sceneID="1HQ-3z-dMR">
             <objects>
-                <viewController id="CbH-xC-u1U" customClass="EditorController" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="CbH-xC-u1U" customClass="EditorController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LQ1-x1-fcx"/>
                         <viewControllerLayoutGuide type="bottom" id="hxn-YB-7aC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tQE-n1-Qqh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="fhL-QM-7Xw">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Draw" width="96" id="TEi-zt-noD"/>
-                        <barButtonItem title="Photo" width="185" id="QXk-wH-jfQ"/>
-                        <barButtonItem title="Text" width="120" id="cQs-Vc-ex9"/>
-                        <barButtonItem title="Decorate" width="144" id="AUa-a3-9fp"/>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLG-X1-zUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

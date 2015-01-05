@@ -34,25 +34,6 @@
 /*
  * enableScaleAndRotation
  */
-- (void)enablePan
-{
-    UIView *parentView=controller.view;
-    parentView.userInteractionEnabled=YES;
-     self.userInteractionEnabled=YES;
-    isPanEnable=YES;
-    
-    UIPanGestureRecognizer *panRcognize=[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    panRcognize.delegate=self;
-    [panRcognize setEnabled:YES];
-    [panRcognize delaysTouchesEnded];
-    [panRcognize cancelsTouchesInView];
-    
-    [self addGestureRecognizer:panRcognize];
-}
-
-/*
- * enableScaleAndRotation
- */
 - (void)enableScaleAndRotation
 {
     UIView *parentView=controller.view;
@@ -105,12 +86,46 @@
     [self addGestureRecognizer:tapRecognize];
     
     isTop = NO;
-    closeButton = [[UIButton alloc] initWithFrame:CGRectMake(-10, -10, 20, 20)];
-    [closeButton setBackgroundImage: [UIImage imageNamed:@"/Users/apple/Documents/workspace/Drawear/Drawear/Drawear/Images.xcassets/image/close.imageset/close.png"]
+    closeButton = [[UIButton alloc] initWithFrame:CGRectMake(-5, -5, 15, 15)];
+    [closeButton setBackgroundImage: [UIImage imageNamed:@"close.png"]
                            forState:UIControlStateNormal];
     [closeButton addTarget:self action:@selector(removeSelf:) forControlEvents:UIControlEventTouchUpInside];
     [closeButton setHidden:YES];
     [self addSubview:closeButton];
+}
+
+/*
+ * enableScaleAndRotation
+ */
+- (void)enablePan
+{
+    UIView *parentView=controller.view;
+    parentView.userInteractionEnabled=YES;
+    self.userInteractionEnabled=YES;
+    isPanEnable=YES;
+    
+    UIPanGestureRecognizer *panRcognize=[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    panRcognize.delegate=self;
+    [panRcognize setEnabled:YES];
+    [panRcognize delaysTouchesEnded];
+    [panRcognize cancelsTouchesInView];
+    
+    [self addGestureRecognizer:panRcognize];
+}
+
+- (void)enableTapAsBackground {
+    UIView *parentView=controller.view;
+    parentView.userInteractionEnabled=YES;
+    self.userInteractionEnabled=YES;
+    
+    UITapGestureRecognizer *backgroundRecognize = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapAsBackground:)];
+    backgroundRecognize.numberOfTapsRequired = 1;
+    backgroundRecognize.delegate = self;
+    [backgroundRecognize setEnabled :YES];
+    [backgroundRecognize delaysTouchesBegan];
+    [backgroundRecognize cancelsTouchesInView];
+    
+    [self addGestureRecognizer:backgroundRecognize];
 }
 
 /*
@@ -197,7 +212,6 @@
     imageRotation+=recognizer.rotation;
     recognizer.view.transform = CGAffineTransformRotate(recognizer.view.transform, recognizer.rotation);
     recognizer.rotation = 0;
-    [closeButton setFrame:CGRectMake(-10, -10, 20, 20)];
     if (recognizer.state == UIGestureRecognizerStateEnded) {
         [controller setCurrTop:self];
     }
@@ -207,14 +221,19 @@
  *  handleTap
  *  @recognizer  UITapGestureRecognizer
  */
--(void) handleTap:(UITapGestureRecognizer *)recognizer
+- (void) handleTap:(UITapGestureRecognizer *)recognizer
 {
     [controller setCurrTop:self];
 }
 
+- (void) handleTapAsBackground:(UITapGestureRecognizer *)recognizer
+{
+    [controller tapBackground];
+}
+
 /*
  *  gestureRecognizer
- *  @retur
+ *  @return
  */
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;

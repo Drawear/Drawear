@@ -52,10 +52,12 @@ typedef enum{
 - (void)handlePinch:(UIPinchGestureRecognizer *)recognizer;
 - (void)handleRotate:(UIRotationGestureRecognizer *)recognizer;
 - (void)handleTap:(UITapGestureRecognizer *)recognizer;
+- (void)handleTapAsBackground:(UITapGestureRecognizer *)recognizer;
 
 - (void)enablePan;
 - (void)enableScaleAndRotation;
 - (void)enableDelete;
+- (void)enableTapAsBackground;
 - (void)setInfoText:(NSString *)string;
 - (void)setTop:(BOOL)isCurrTop;
 
