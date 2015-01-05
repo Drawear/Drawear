@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AD32E1A5AB193000FFFD6 /* UITextFieldEx.m */; };
 		18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */; };
 		18DA2F871A591B7C007C7B23 /* EditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA2F861A591B7C007C7B23 /* EditorController.m */; };
 		2F50A1121A555E8700D407B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50A1111A555E8700D407B3 /* main.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183AD32D1A5AB193000FFFD6 /* UITextFieldEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldEx.h; path = view/UITextFieldEx.h; sourceTree = "<group>"; };
+		183AD32E1A5AB193000FFFD6 /* UITextFieldEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITextFieldEx.m; path = view/UITextFieldEx.m; sourceTree = "<group>"; };
 		18DA2F7B1A59177D007C7B23 /* UIImageViewEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIImageViewEx.h; path = view/UIImageViewEx.h; sourceTree = "<group>"; };
 		18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageViewEx.m; path = view/UIImageViewEx.m; sourceTree = "<group>"; };
 		18DA2F851A591B7C007C7B23 /* EditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorController.h; path = controller/EditorController.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 			children = (
 				18DA2F7B1A59177D007C7B23 /* UIImageViewEx.h */,
 				18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */,
+				183AD32D1A5AB193000FFFD6 /* UITextFieldEx.h */,
+				183AD32E1A5AB193000FFFD6 /* UITextFieldEx.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */,
+				183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */,
 				2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */,
 				2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */,
 				2F50A1151A555E8700D407B3 /* AppDelegate.m in Sources */,

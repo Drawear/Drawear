@@ -6,13 +6,28 @@
 //  Copyright (c) 2015 Sidney. All rights reserved.
 //
 
-#import "UIImageViewEx.h"
+#import "UITextFieldEx.h"
 #import "EditorController.h"
 
-@implementation UIImageViewEx
+@implementation UITextFieldEx
 @synthesize controller, closeButton;
 @synthesize isRotateEnable,isPanEnable,isPinchEnable,isTap,isTop;
 @synthesize imageSize,imageRotation,imagePoint;
+
+- (void)initWithTextAttribute
+{
+    self.textColor = [UIColor blackColor];
+    self.font = [UIFont fontWithName:@"Arial" size:16.0];
+    self.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.returnKeyType = UIReturnKeyDone;
+    self.keyboardType =UIKeyboardTypeDefault;
+    self.delegate = self;
+    self.adjustsFontSizeToFitWidth = YES;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+}
 
 /*
  * setController
@@ -27,8 +42,19 @@
  * removeSelf
  * @sender id;
  */
-- (IBAction)removeSelf:(id)sender{
+- (IBAction)removeSelf:(id)sender {
     [self removeFromSuperview];
+}
+
+- (void) textFieldDidChange:(id) sender {
+    UITextField *_field = (UITextField *)sender;
+    NSString *text = _field.text;
+    CGRect rect = _field.frame;
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *attributes = @{NSFontAttributeName:_field.font, NSParagraphStyleAttributeName:paragraphStyle.copy};
+    CGRect size = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, rect.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    [_field setFrame:CGRectMake(rect.origin.x, rect.origin.y, size.size.width + 30, rect.size.height)];
 }
 
 /*
@@ -41,7 +67,7 @@
     
     isPinchEnable=YES;
     isRotateEnable=YES;
-
+    
     imageSize=1;
     imageRotation=0;
     
@@ -92,7 +118,9 @@
                            forState:UIControlStateNormal];
     [closeButton addTarget:self action:@selector(removeSelf:) forControlEvents:UIControlEventTouchUpInside];
     [closeButton setHidden:YES];
-    [self addSubview:closeButton];
+   
+    [self setRightView:closeButton];
+    [self setRightViewMode:UITextFieldViewModeAlways];
 }
 
 /*
@@ -130,6 +158,14 @@
 }
 
 /*
+ * setInfoText
+ * @string NSString
+ */
+- (void)setInfoText:(NSString *)string
+{
+   
+}
+/*
  *  SetShadow
  *  @isShadow
  */
@@ -137,16 +173,8 @@
 {
     isTop = isCurrTop;
     if (!isCurrTop) {
-        [[self layer] setShadowOffset:CGSizeMake(0, 0)];
-        [[self layer] setShadowRadius:0];
-        [[self layer] setShadowOpacity:1];
-        [[self layer] setShadowColor:[UIColor whiteColor].CGColor];
         [closeButton setHidden:YES];
     }else{
-        [[self layer] setShadowOffset:CGSizeMake(3, 3)];
-        [[self layer] setShadowRadius:3];
-        [[self layer] setShadowOpacity:0.5];
-        [[self layer] setShadowColor:[UIColor blackColor].CGColor];
         [closeButton setHidden:NO];
     }
 }
@@ -222,5 +250,12 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end

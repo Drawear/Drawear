@@ -9,8 +9,9 @@
 #import <UIKit/UiKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "EditorController.h"
+#import "UITextFieldEx.h"
 
-@interface UIImageViewEx : UIImageView<UIGestureRecognizerDelegate>
+@interface UITextFieldEx : UITextField<UIGestureRecognizerDelegate, UITextFieldDelegate>
 {
     EditorController *controller;
     UIButton *closeButton;
@@ -39,6 +40,8 @@
 @property BOOL isTap;
 @property BOOL isTop;
 
+- (void)initWithTextAttribute;
+
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer;
 - (void)handlePinch:(UIPinchGestureRecognizer *)recognizer;
 - (void)handleRotate:(UIRotationGestureRecognizer *)recognizer;
@@ -49,9 +52,11 @@
 - (void)enableScaleAndRotation;
 - (void)enableDelete;
 - (void)enableTapAsBackground;
+- (void)setInfoText:(NSString *)string;
 - (void)setTop:(BOOL)isCurrTop;
 
 - (void)setController:(EditorController *) uiViewController;
 - (IBAction)removeSelf:(id)sender;
+- (void) textFieldDidChange:(id) sender;
 
 @end

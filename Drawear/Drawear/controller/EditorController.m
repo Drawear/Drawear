@@ -8,6 +8,7 @@
 
 #import "EditorController.h"
 #import "UIImageViewEx.h"
+#import "UITextFieldEx.h"
 
 @interface EditorController (){
     
@@ -19,7 +20,7 @@
 
 @synthesize drawBoard;
 
-UIImageViewEx *currTop;
+UIView *currTop;
 UIImageViewEx *background;
 
 - (void)viewDidLoad {
@@ -31,6 +32,8 @@ UIImageViewEx *background;
     // add sample images
     [self addImageByPath:@"wukong.png"];
     [self addImageByPath:@"juhua.jpg"];
+    [self addTextByText:@"输入文字1"];
+    [self addTextByText:@"输入文字2"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +46,6 @@ UIImageViewEx *background;
     // init draw board
     drawBoard = [[UIView alloc] initWithFrame:[self.view frame]];
     // init default background
-//    background = [[UIImageViewEx alloc] initWithImage:[UIImage imageNamed:@"T-shirt.png"]];
     background = [[UIImageViewEx alloc] init];
     [background setFrame:drawBoard.frame];
     [background setCenter:self.view.center];
@@ -58,16 +60,31 @@ UIImageViewEx *background;
     [self.view addSubview:drawBoard];
 }
 
-- (void)setCurrTop: (UIImageViewEx*) view {
+- (void)setCurrTop: (UIView*) view {
     if (view == nil) {
         currTop = nil;
     }
     if(currTop != nil){
-        [currTop setTop: NO];
+        if ([currTop isKindOfClass:[UIImageViewEx class]]) {
+            [(UIImageViewEx *)currTop setTop: NO];
+        }
+        if ([currTop isKindOfClass:[UITextFieldEx class]]) {
+            [(UITextFieldEx *)currTop setTop: NO];
+        }
+        
     }
     currTop = view;
     [drawBoard bringSubviewToFront:currTop];
-    [currTop setTop:YES];
+    if(currTop != nil){
+        if ([currTop isKindOfClass:[UIImageViewEx class]]) {
+            [(UIImageViewEx *)currTop setTop: YES];
+        }
+        if ([currTop isKindOfClass:[UITextFieldEx class]]) {
+            [(UITextFieldEx *)currTop setTop: YES];
+            [(UITextFieldEx *)currTop resignFirstResponder];
+        }
+        
+    }
 }
 
 - (void)addImageByView: (UIImageViewEx *) view {
@@ -91,6 +108,24 @@ UIImageViewEx *background;
     [self addImageByView:imageView];
 }
 
+- (void)addTextByView: (UITextFieldEx *) textField {
+    [textField setCenter:self.view.center];
+    [textField setController: self];
+    [textField enablePan];
+    [textField enableScaleAndRotation];
+    [textField enableDelete];
+    
+    [drawBoard addSubview:textField];
+}
+
+- (void)addTextByText: (NSString *) text {
+    UITextFieldEx *textField = [[UITextFieldEx alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    [textField initWithTextAttribute];
+    textField.placeholder = text;
+
+    [self addTextByView:textField];
+}
+
 - (void)setBackgroundByImage: (UIImage *) image {
     [background setImage:image];
 }
@@ -103,9 +138,16 @@ UIImageViewEx *background;
 - (void)tapBackground
 {
     if(currTop != nil){
-        [currTop setTop: NO];
+        if ([currTop isKindOfClass:[UIImageViewEx class]]) {
+            [(UIImageViewEx *)currTop setTop: NO];
+        }
+        if ([currTop isKindOfClass:[UITextFieldEx class]]) {
+            [(UITextFieldEx *)currTop setTop: NO];
+            [(UITextFieldEx *)currTop resignFirstResponder];
+        }
         currTop = nil;
     }
 }
+
 
 @end
