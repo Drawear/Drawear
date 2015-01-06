@@ -173,6 +173,9 @@
 {
     isTop = isCurrTop;
     if (!isCurrTop) {
+        if ([self.text length]==0) {
+            [self removeFromSuperview];
+        }
         [closeButton setHidden:YES];
     }else{
         [closeButton setHidden:NO];
@@ -236,6 +239,7 @@
 - (void) handleTap:(UITapGestureRecognizer *)recognizer
 {
     [controller setCurrTop:self];
+    [self becomeFirstResponder];
 }
 
 - (void) handleTapAsBackground:(UITapGestureRecognizer *)recognizer

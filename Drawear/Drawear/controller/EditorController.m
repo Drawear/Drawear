@@ -121,7 +121,7 @@ UIImageViewEx *background;
 - (void)addTextByText: (NSString *) text {
     UITextFieldEx *textField = [[UITextFieldEx alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     [textField initWithTextAttribute];
-    textField.placeholder = text;
+    textField.text = text;
 
     [self addTextByView:textField];
 }
