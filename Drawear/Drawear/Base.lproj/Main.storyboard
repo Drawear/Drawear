@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CbH-xC-u1U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -66,26 +66,9 @@
                                 <color key="textColor" red="0.22600831436978205" green="0.37525908801020413" blue="0.37525908801020413" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUX-IJ-xEf">
-                                <rect key="frame" x="134" y="385" width="33" height="30"/>
-                                <state key="normal" title="login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xoB-FD-4QZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03x-r3-emg">
-                                <rect key="frame" x="369" y="385" width="52" height="30"/>
-                                <state key="normal" title="register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iRR-OF-xQl" kind="modal" id="DqC-fB-amp"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W92-zB-YQS">
-                                <rect key="frame" x="224" y="263" width="191" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  mobile phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulC-JC-WRj">
+                                <rect key="frame" x="259" y="346" width="250" height="48"/>
+                                <color key="backgroundColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -98,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106.24000000000001" y="-397.65333333333336"/>
+            <point key="canvasLocation" x="-133" y="-450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tgn-m9-mq4">
@@ -235,7 +218,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jpq-L9-Xo3"/>
+                    <navigationItem key="navigationItem" id="MJV-mh-KaL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCm-hh-722" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,7 +254,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e9L-mt-5dr"/>
+                    <navigationItem key="navigationItem" id="3Ch-uR-FyZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oga-8Z-Ifv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,7 +287,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5GL-Uw-tMY"/>
+                    <navigationItem key="navigationItem" id="Vsh-NA-Zcq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rs-EM-awc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,7 +314,7 @@
                             <outlet property="delegate" destination="40z-lX-K7l" id="ys7-YC-ffa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bpa-HV-0iu"/>
+                    <navigationItem key="navigationItem" id="WFe-uy-ZnZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33R-fK-CnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
