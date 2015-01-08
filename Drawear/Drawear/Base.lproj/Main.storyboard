@@ -339,11 +339,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEd-yj-llG">
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
                                 <items>
-                                    <barButtonItem title="Add Image" id="bkf-8z-1VT">
+                                    <barButtonItem title="Add Image" width="108" id="bkf-8z-1VT">
                                         <connections>
                                             <action selector="addPictureTapped:" destination="CbH-xC-u1U" id="iLJ-D7-Oqm"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Add Text" width="108" id="ojf-Pf-aFN">
+                                        <connections>
+                                            <action selector="addTextTapped:" destination="CbH-xC-u1U" id="gvB-fd-nrH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Drawear" width="108" id="SYG-0E-r23"/>
                                 </items>
                             </toolbar>
                         </subviews>

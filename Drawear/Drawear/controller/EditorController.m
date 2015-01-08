@@ -35,8 +35,6 @@ UIImageViewEx *background;
     // add sample images
     [self addImageByPath:@"wukong.png"];
     [self addImageByPath:@"juhua.jpg"];
-    [self addTextByText:@"输入文字1"];
-    [self addTextByText:@"输入文字2"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +66,10 @@ UIImageViewEx *background;
         self.picker.allowsEditing = NO;
     }
     [self presentViewController:_picker animated:YES completion:nil];
+}
+
+- (IBAction)addTextTapped:(id)sender {
+    [self addTextByText:@"请输入文字"];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
