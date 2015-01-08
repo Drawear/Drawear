@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITabBarDelegate, UIActionSheetDelegate, UIScrollViewDelegate>
 {
     
 }
