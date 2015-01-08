@@ -14,11 +14,14 @@
     
 }
 
+//@property (strong, nonatomic) IBOutlet UIView *drawView;
+@property (weak, nonatomic) IBOutlet UIView *drawView;
+
 @end
 
 @implementation EditorController
 
-@synthesize drawBoard;
+@synthesize picker = _picker;
 
 UIView *currTop;
 UIImageViewEx *background;
@@ -43,21 +46,41 @@ UIImageViewEx *background;
 }
 
 - (void)initDrawBoard {
-    // init draw board
-    drawBoard = [[UIView alloc] initWithFrame:[self.view frame]];
     // init default background
     background = [[UIImageViewEx alloc] init];
-    [background setFrame:drawBoard.frame];
-    [background setCenter:self.view.center];
+    [background setCenter:self.drawView.center];
+    [background setFrame:self.drawView.frame];
     [background setContentMode: UIViewContentModeScaleAspectFit];
     [background setController: self];
     [background enableTapAsBackground];
     
     [self setBackgroundByPath: @"T-shirt.png"];
     
-    [drawBoard addSubview:background];
+    [self.drawView addSubview:background];
     
-    [self.view addSubview:drawBoard];
+}
+
+- (IBAction)addPictureTapped:(id)sender {
+    if (self.picker == nil) {
+        self.picker = [[UIImagePickerController alloc] init];
+        self.picker.delegate = self;
+        self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        self.picker.allowsEditing = NO;
+    }
+    [self presentViewController:_picker animated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *fullImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [self addImageByImage:fullImage];
 }
 
 - (void)setCurrTop: (UIView*) view {
@@ -74,7 +97,7 @@ UIImageViewEx *background;
         
     }
     currTop = view;
-    [drawBoard bringSubviewToFront:currTop];
+    [self.drawView bringSubviewToFront:currTop];
     if(currTop != nil){
         if ([currTop isKindOfClass:[UIImageViewEx class]]) {
             [(UIImageViewEx *)currTop setTop: YES];
@@ -88,13 +111,13 @@ UIImageViewEx *background;
 }
 
 - (void)addImageByView: (UIImageViewEx *) view {
-    [view setCenter:self.view.center];
+    [view setCenter: self.drawView.center];
     [view setController: self];
     [view enablePan];
     [view enableScaleAndRotation];
     [view enableDelete];
     
-    [drawBoard addSubview:view];
+    [self.drawView addSubview:view];
 }
 
 - (void)addImageByImage: (UIImage *) image {
@@ -109,13 +132,13 @@ UIImageViewEx *background;
 }
 
 - (void)addTextByView: (UITextFieldEx *) textField {
-    [textField setCenter:self.view.center];
+    [textField setCenter:self.drawView.center];
     [textField setController: self];
     [textField enablePan];
     [textField enableScaleAndRotation];
     [textField enableDelete];
     
-    [drawBoard addSubview:textField];
+    [self.drawView addSubview:textField];
 }
 
 - (void)addTextByText: (NSString *) text {

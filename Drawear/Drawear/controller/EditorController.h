@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditorController : UIViewController
+@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
-    UIView *drawBoard; // draw board
+    
 }
 
-@property (nonatomic,retain) UIView *drawBoard;
+@property (strong, nonatomic) UIImagePickerController *picker;
 
 - (void)addImageByView: (UIImageView *) view; // add image passing UIImageView
 - (void)addImageByImage: (UIImage *) image; // add image passing UIImage
