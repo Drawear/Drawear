@@ -16,6 +16,11 @@
 		2F50A11D1A555E8700D407B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F50A11C1A555E8700D407B3 /* Images.xcassets */; };
 		2F50A1201A555E8700D407B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F50A11E1A555E8700D407B3 /* LaunchScreen.xib */; };
 		2F50A12C1A555E8700D407B3 /* DrawearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50A12B1A555E8700D407B3 /* DrawearTests.m */; };
+		2F55EEB51A5EB8B100AEFD55 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEB21A5EB8B100AEFD55 /* HttpHelper.m */; };
+		2F55EEB61A5EB8B100AEFD55 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEB41A5EB8B100AEFD55 /* Profile.m */; };
+		2F55EEB91A5EBDF300AEFD55 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */; };
+		2F55EEBC1A5EC2FA00AEFD55 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */; };
+		2F55EEBF1A5EC4F000AEFD55 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +53,16 @@
 		2F50A1251A555E8700D407B3 /* DrawearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F50A12A1A555E8700D407B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F50A12B1A555E8700D407B3 /* DrawearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawearTests.m; sourceTree = "<group>"; };
+		2F55EEB11A5EB8B100AEFD55 /* HttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		2F55EEB21A5EB8B100AEFD55 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		2F55EEB31A5EB8B100AEFD55 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		2F55EEB41A5EB8B100AEFD55 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		2F55EEB71A5EBDF300AEFD55 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = controller/HomeViewController.h; sourceTree = "<group>"; };
+		2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = controller/HomeViewController.m; sourceTree = "<group>"; };
+		2F55EEBA1A5EC2FA00AEFD55 /* OrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderTableViewController.h; path = controller/OrderTableViewController.h; sourceTree = "<group>"; };
+		2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderTableViewController.m; path = controller/OrderTableViewController.m; sourceTree = "<group>"; };
+		2F55EEBD1A5EC4F000AEFD55 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountViewController.h; path = controller/AccountViewController.h; sourceTree = "<group>"; };
+		2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountViewController.m; path = controller/AccountViewController.m; sourceTree = "<group>"; };
 		2FE7DF641A56D9AB00D27A03 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = controller/LoginController.h; sourceTree = "<group>"; };
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
@@ -104,6 +119,7 @@
 		2F50A10E1A555E8700D407B3 /* Drawear */ = {
 			isa = PBXGroup;
 			children = (
+				2F55EEB01A5EB8B100AEFD55 /* model */,
 				18DA2F771A59172C007C7B23 /* view */,
 				2F50A1351A557BA000D407B3 /* controller */,
 				2F50A1131A555E8700D407B3 /* AppDelegate.h */,
@@ -151,8 +167,25 @@
 				2FE7DF681A56DA7200D27A03 /* RegisterController.m */,
 				18DA2F851A591B7C007C7B23 /* EditorController.h */,
 				18DA2F861A591B7C007C7B23 /* EditorController.m */,
+				2F55EEB71A5EBDF300AEFD55 /* HomeViewController.h */,
+				2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */,
+				2F55EEBA1A5EC2FA00AEFD55 /* OrderTableViewController.h */,
+				2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */,
+				2F55EEBD1A5EC4F000AEFD55 /* AccountViewController.h */,
+				2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		2F55EEB01A5EB8B100AEFD55 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2F55EEB11A5EB8B100AEFD55 /* HttpHelper.h */,
+				2F55EEB21A5EB8B100AEFD55 /* HttpHelper.m */,
+				2F55EEB31A5EB8B100AEFD55 /* Profile.h */,
+				2F55EEB41A5EB8B100AEFD55 /* Profile.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,10 +291,15 @@
 				18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */,
 				183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */,
 				2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */,
+				2F55EEB91A5EBDF300AEFD55 /* HomeViewController.m in Sources */,
+				2F55EEB61A5EB8B100AEFD55 /* Profile.m in Sources */,
 				2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */,
 				2F50A1151A555E8700D407B3 /* AppDelegate.m in Sources */,
+				2F55EEBC1A5EC2FA00AEFD55 /* OrderTableViewController.m in Sources */,
 				18DA2F871A591B7C007C7B23 /* EditorController.m in Sources */,
 				2F50A1121A555E8700D407B3 /* main.m in Sources */,
+				2F55EEBF1A5EC4F000AEFD55 /* AccountViewController.m in Sources */,
+				2F55EEB51A5EB8B100AEFD55 /* HttpHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
