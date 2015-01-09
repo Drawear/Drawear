@@ -50,6 +50,7 @@
         profile.name=@"admin";
         profile.phone=phone;
         [Profile setCurrProfile:profile];
+//        [profile loadSavedData];
         return true;
     }
     return false;
