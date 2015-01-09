@@ -67,6 +67,9 @@
 		2F55F0191A5FBB1F00AEFD55 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
+		D639263E1A5FF3A50065BB3C /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D639263D1A5FF3A50065BB3C /* AddressTableViewController.m */; };
+		D63926411A5FF4990065BB3C /* CreateOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63926401A5FF4990065BB3C /* CreateOrderController.m */; };
+		D6CE556F1A60109700A8190E /* AddressAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CE556E1A60109700A8190E /* AddressAddViewController.m */; };
 		D6F8F13E1A5F825600F5023E /* profileService.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F8F13D1A5F825600F5023E /* profileService.m */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +200,12 @@
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
 		2FE7DF681A56DA7200D27A03 /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterController.m; path = controller/RegisterController.m; sourceTree = "<group>"; };
+		D639263C1A5FF3A50065BB3C /* AddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressTableViewController.h; path = controller/AddressTableViewController.h; sourceTree = "<group>"; };
+		D639263D1A5FF3A50065BB3C /* AddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressTableViewController.m; path = controller/AddressTableViewController.m; sourceTree = "<group>"; };
+		D639263F1A5FF4990065BB3C /* CreateOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateOrderController.h; path = controller/CreateOrderController.h; sourceTree = "<group>"; };
+		D63926401A5FF4990065BB3C /* CreateOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateOrderController.m; path = controller/CreateOrderController.m; sourceTree = "<group>"; };
+		D6CE556D1A60109700A8190E /* AddressAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressAddViewController.h; path = controller/AddressAddViewController.h; sourceTree = "<group>"; };
+		D6CE556E1A60109700A8190E /* AddressAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressAddViewController.m; path = controller/AddressAddViewController.m; sourceTree = "<group>"; };
 		D6F8F13C1A5F825600F5023E /* profileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileService.h; sourceTree = "<group>"; };
 		D6F8F13D1A5F825600F5023E /* profileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +328,12 @@
 				2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */,
 				2F55F0171A5FBB1F00AEFD55 /* AccountTableViewController.h */,
 				2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */,
+				D639263C1A5FF3A50065BB3C /* AddressTableViewController.h */,
+				D639263D1A5FF3A50065BB3C /* AddressTableViewController.m */,
+				D639263F1A5FF4990065BB3C /* CreateOrderController.h */,
+				D63926401A5FF4990065BB3C /* CreateOrderController.m */,
+				D6CE556D1A60109700A8190E /* AddressAddViewController.h */,
+				D6CE556E1A60109700A8190E /* AddressAddViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -634,6 +649,7 @@
 			files = (
 				18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */,
 				2F55F00A1A5EDD9B00AEFD55 /* UIDevice+SystemVersion.m in Sources */,
+				D639263E1A5FF3A50065BB3C /* AddressTableViewController.m in Sources */,
 				2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */,
 				2F55EFF71A5EDD9B00AEFD55 /* CLHueEffect.m in Sources */,
 				2F55EFF51A5EDD9B00AEFD55 /* CLGloomEffect.m in Sources */,
@@ -659,6 +675,7 @@
 				2F55EFFE1A5EDD9B00AEFD55 /* CLFilterTool.m in Sources */,
 				2F55F0011A5EDD9B00AEFD55 /* CLToneCurveTool.m in Sources */,
 				2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */,
+				D63926411A5FF4990065BB3C /* CreateOrderController.m in Sources */,
 				2F55EFF61A5EDD9B00AEFD55 /* CLHighlightShadowEffect.m in Sources */,
 				2F50A1151A555E8700D407B3 /* AppDelegate.m in Sources */,
 				2F55F0091A5EDD9B00AEFD55 /* CLSplineInterpolator.m in Sources */,
@@ -672,6 +689,7 @@
 				2F50A1121A555E8700D407B3 /* main.m in Sources */,
 				1895D2581A5FDEBC003E8901 /* ColorPicker.m in Sources */,
 				2F55EFF81A5EDD9B00AEFD55 /* CLPixellateEffect.m in Sources */,
+				D6CE556F1A60109700A8190E /* AddressAddViewController.m in Sources */,
 				2F55F00C1A5EDD9B00AEFD55 /* UIView+Frame.m in Sources */,
 				2F55EFFB1A5EDD9B00AEFD55 /* CLEffectBase.m in Sources */,
 				2F55EFF41A5EDD9B00AEFD55 /* CLBloomEffect.m in Sources */,

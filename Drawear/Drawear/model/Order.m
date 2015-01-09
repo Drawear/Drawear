@@ -14,6 +14,7 @@
 #define oSizeKey @"size"
 #define oCountKey @"count"
 #define oStatusKey @"status"
+#define oDate @"date"
 
 @implementation Order
 
@@ -25,10 +26,12 @@
     [encoder encodeObject:self.size forKey:oSizeKey];
     [encoder encodeInt:self.count forKey:oCountKey];
     [encoder encodeInt:self.status forKey:oStatusKey];
+    [encoder encodeObject:self.date forKey:oDate];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
     if ((self = [super init])) {
+        self.date = [decoder decodeObjectForKey:oDate];
         self.pictureName= [decoder decodeObjectForKey:oNameKey];
         self.address=[decoder decodeIntForKey:oAddrKey];
         self.picture=[decoder decodeObjectForKey:oPictureKey];
@@ -39,5 +42,19 @@
     }
     return self;
 }
+
++(Order*) getExample{
+    Order* order = [[Order alloc] init];
+    order.pictureName = @"juhua";
+    order.address = 1;
+    order.picture = [UIImage imageNamed:@"juhua.jpg"];
+    order.size = @"M";
+    order.status = 1;
+    order.count = 1;
+    order.date = [NSDate date];
+    
+    return order;
+}
+
 
 @end

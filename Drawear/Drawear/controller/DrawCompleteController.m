@@ -36,4 +36,16 @@
 }
 */
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"createOrder"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Prepare to create an order." message:@"Please check your information." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        // optional - add more buttons
+        [alert show];
+        
+        UIViewController* view = segue.destinationViewController;
+        [view setValue:self.image forKey:@"image"];
+
+    }
+}
+
 @end

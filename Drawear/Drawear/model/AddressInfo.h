@@ -10,9 +10,14 @@
 
 @interface AddressInfo : NSObject<NSCoding>
 
+@property int addID;
 @property NSString* province;
 @property NSString* city;
 @property NSString* street;
 @property NSString* postcode;
+-(NSString*) getAdd;
++(AddressInfo*) getExample;
 
 @end
+
+

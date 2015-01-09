@@ -18,5 +18,8 @@
 @property NSString* size;
 @property int count;
 @property int status;
+@property NSDate* date;
+
++(Order*) getExample;
 
 @end
