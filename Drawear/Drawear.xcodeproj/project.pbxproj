@@ -20,7 +20,6 @@
 		2F55EEB61A5EB8B100AEFD55 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEB41A5EB8B100AEFD55 /* Profile.m */; };
 		2F55EEB91A5EBDF300AEFD55 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */; };
 		2F55EEBC1A5EC2FA00AEFD55 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */; };
-		2F55EEBF1A5EC4F000AEFD55 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */; };
 		2F55EF1F1A5ED59400AEFD55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F55EF181A5ED53700AEFD55 /* Foundation.framework */; };
 		2F55EF201A5ED59D00AEFD55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F55EF1A1A5ED54800AEFD55 /* CoreGraphics.framework */; };
 		2F55EF211A5ED5A200AEFD55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F55EF1C1A5ED55300AEFD55 /* UIKit.framework */; };
@@ -61,6 +60,7 @@
 		2F55F00D1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EFEB1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m */; };
 		2F55F0131A5F805C00AEFD55 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0121A5F805C00AEFD55 /* Order.m */; };
 		2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0151A5F813000AEFD55 /* AddressInfo.m */; };
+		2F55F0191A5FBB1F00AEFD55 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
 		D6F8F13E1A5F825600F5023E /* profileService.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F8F13D1A5F825600F5023E /* profileService.m */; };
@@ -102,8 +102,6 @@
 		2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = controller/HomeViewController.m; sourceTree = "<group>"; };
 		2F55EEBA1A5EC2FA00AEFD55 /* OrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderTableViewController.h; path = controller/OrderTableViewController.h; sourceTree = "<group>"; };
 		2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderTableViewController.m; path = controller/OrderTableViewController.m; sourceTree = "<group>"; };
-		2F55EEBD1A5EC4F000AEFD55 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountViewController.h; path = controller/AccountViewController.h; sourceTree = "<group>"; };
-		2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountViewController.m; path = controller/AccountViewController.m; sourceTree = "<group>"; };
 		2F55EF181A5ED53700AEFD55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2F55EF1A1A5ED54800AEFD55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2F55EF1C1A5ED55300AEFD55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -181,6 +179,8 @@
 		2F55F0121A5F805C00AEFD55 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		2F55F0141A5F813000AEFD55 /* AddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfo.h; sourceTree = "<group>"; };
 		2F55F0151A5F813000AEFD55 /* AddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfo.m; sourceTree = "<group>"; };
+		2F55F0171A5FBB1F00AEFD55 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = controller/AccountTableViewController.h; sourceTree = "<group>"; };
+		2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountTableViewController.m; path = controller/AccountTableViewController.m; sourceTree = "<group>"; };
 		2FE7DF641A56D9AB00D27A03 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = controller/LoginController.h; sourceTree = "<group>"; };
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
@@ -297,8 +297,8 @@
 				2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */,
 				2F55EEBA1A5EC2FA00AEFD55 /* OrderTableViewController.h */,
 				2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */,
-				2F55EEBD1A5EC4F000AEFD55 /* AccountViewController.h */,
-				2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */,
+				2F55F0171A5FBB1F00AEFD55 /* AccountTableViewController.h */,
+				2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -639,6 +639,7 @@
 				2F55EFF61A5EDD9B00AEFD55 /* CLHighlightShadowEffect.m in Sources */,
 				2F50A1151A555E8700D407B3 /* AppDelegate.m in Sources */,
 				2F55F0091A5EDD9B00AEFD55 /* CLSplineInterpolator.m in Sources */,
+				2F55F0191A5FBB1F00AEFD55 /* AccountTableViewController.m in Sources */,
 				2F55EEBC1A5EC2FA00AEFD55 /* OrderTableViewController.m in Sources */,
 				2F55EFF01A5EDD9B00AEFD55 /* CLAdjustmentTool.m in Sources */,
 				2F55EFFF1A5EDD9B00AEFD55 /* CLImageToolBase.m in Sources */,
@@ -658,7 +659,6 @@
 				2F55EFEE1A5EDD9B00AEFD55 /* CLImageEditorTheme.m in Sources */,
 				2F55F0071A5EDD9B00AEFD55 /* UIView+CLImageToolInfo.m in Sources */,
 				2F55EFFA1A5EDD9B00AEFD55 /* CLSpotEffect.m in Sources */,
-				2F55EEBF1A5EC4F000AEFD55 /* AccountViewController.m in Sources */,
 				2F55EEB51A5EB8B100AEFD55 /* HttpHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
