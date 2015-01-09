@@ -28,6 +28,7 @@
 }
 
 - (IBAction)buttonLogin:(UIButton *)sender {
+    [NSThread sleepForTimeInterval:2];
     BOOL result = [profileService userLogin2:self.phone.text password:self.password.text];
     if (result) {
         [self performSegueWithIdentifier:@"loginToMain" sender:self];

@@ -16,6 +16,7 @@
 @end
 
 @implementation AddressTableViewController
+@synthesize delegate = _delegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,10 +59,18 @@
     AddressInfo* addr = [self.address objectAtIndex:indexPath.row];
     cell.textLabel.text = [addr getAdd];
     
-    
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AddressInfo* addr = [self.address objectAtIndex:indexPath.row];
+    [self.delegate addrTable:self didChangeWithString:[addr getAdd]];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
 
 /*
 // Override to support conditional editing of the table view.

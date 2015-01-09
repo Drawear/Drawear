@@ -12,10 +12,11 @@
 @implementation TouchDrawView
 {
 }
+
 @synthesize currentLine;
 @synthesize linesCompleted;
 @synthesize drawColor;
-@synthesize undoBtn;
+@synthesize canDraw;
 
 - (id)initWithCoder:(NSCoder *)c
 {
@@ -55,15 +56,18 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.undoManager beginUndoGrouping];
-    for (UITouch *t in touches) {
-        // Create a line for the value
-        CGPoint loc = [t locationInView:self];
-        Line *newLine = [[Line alloc] init];
-        [newLine setBegin:loc];
-        [newLine setEnd:loc];
-        [newLine setColor:drawColor];
-        currentLine = newLine;
+    if (canDraw) {
+        [self.undoManager beginUndoGrouping];
+        for (UITouch *t in touches) {
+            // Create a line for the value
+            CGPoint loc = [t locationInView:self];
+            Line *newLine = [[Line alloc] init];
+            [newLine setBegin:loc];
+            [newLine setEnd:loc];
+            [newLine setColor:drawColor];
+            currentLine = newLine;
+        }
+        
     }
 }
 
@@ -97,21 +101,23 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    for (UITouch *t in touches) {
-        [currentLine setColor:drawColor];
-        CGPoint loc = [t locationInView:self];
-        [currentLine setEnd:loc];
-        
-        if (currentLine) {
-            [self addLine:currentLine];
+    if (canDraw) {
+        for (UITouch *t in touches) {
+            [currentLine setColor:drawColor];
+            CGPoint loc = [t locationInView:self];
+            [currentLine setEnd:loc];
+            
+            if (currentLine) {
+                [self addLine:currentLine];
+            }
+            Line *newLine = [[Line alloc] init];
+            [newLine setBegin:loc];
+            [newLine setEnd:loc];
+            [newLine setColor:drawColor];
+            currentLine = newLine;
         }
-        Line *newLine = [[Line alloc] init];
-        [newLine setBegin:loc];
-        [newLine setEnd:loc];
-        [newLine setColor:drawColor];
-        currentLine = newLine;
+        [self setNeedsDisplay];
     }
-    [self setNeedsDisplay];
 }
 
 - (void)endTouches:(NSSet *)touches
@@ -121,8 +127,10 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self endTouches:touches];
-    [self.undoManager endUndoGrouping];
+    if (canDraw) {
+        [self endTouches:touches];
+        [self.undoManager endUndoGrouping];
+    }
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -144,16 +152,27 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setBackgroundColor:[UIColor clearColor]];
+        NSLog(@"initWithFram");
     }
-    undoBtn = [[UIButton alloc]init];
-    undoBtn.titleLabel.text = @"Undo";
-    [undoBtn.titleLabel setTextColor:[UIColor blackColor]];
-    [undoBtn setBackgroundColor:[UIColor grayColor]];
-    [undoBtn setFrame:CGRectMake(20, 20, 100, 30)];
-    
-    [self addSubview:undoBtn];
     return self;
+}
+
+- (void)initButton{
+    linesCompleted = [[NSMutableArray alloc] init];
+    canDraw = NO;
+    drawColor = [UIColor blackColor];
+    [self setMultipleTouchEnabled:YES];
+    [self becomeFirstResponder];
+    [self setBackgroundColor:[UIColor clearColor]];
+}
+
+- (void)switchVisible{
+    if (canDraw) {
+        canDraw = NO;
+    }else{
+        canDraw = YES;
+    }
+    
 }
 
 @end

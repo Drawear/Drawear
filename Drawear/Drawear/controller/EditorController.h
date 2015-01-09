@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColorPicker.h"
+#import "TouchDrawView.h"
+#import "DecorateViewController.h"
 
-@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITabBarDelegate, UIActionSheetDelegate, UIScrollViewDelegate>
+@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITabBarDelegate, UIActionSheetDelegate, UIScrollViewDelegate,ColorPickerDelegate,addItemDelegate>
 {
-    
+    BOOL isSelectedColor;
 }
 
 @property (strong, nonatomic) UIImagePickerController *picker;
+@property (nonatomic) TouchDrawView *drawArea;
 
 - (void)addImageByView: (UIImageView *) view; // add image passing UIImageView
 - (void)addImageByImage: (UIImage *) image; // add image passing UIImage

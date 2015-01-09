@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AddressTableViewController.h"
 
-@interface CreateOrderController : UIViewController<changeAddrDelegate>
+@interface CreateOrderController : UIViewController<changeAddrDelegate,UIAlertViewDelegate>
+
 
 @end

@@ -53,19 +53,24 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"changeAddr"]) {
+        AddressTableViewController* controller=[segue destinationViewController];
+        controller.delegate=self;
+    }
 }
-*/
+
 - (IBAction)createOrder:(id)sender {
     Order* newOrder = [[Order alloc] init];
     newOrder.picture = self.image;
     newOrder.address = self.addIndex;
+    newOrder.count =1;
     newOrder.size = @"M";
     newOrder.status = 1;
     newOrder.date = [NSDate date];
@@ -73,7 +78,8 @@
     Profile* profile = [Profile getCurrProfile];
     NSMutableArray* orders = profile.orders;
     [orders addObject:newOrder];
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have created a new order. Please go back to check your orders" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - changeAddrDelegate
@@ -81,7 +87,13 @@
 - (void)addrTable:(AddressTableViewController*)tableView didChangeWithString:(NSString*)address{
     
     self.labelAddress.text = address;
-    
+
+}
+
+#pragma mark - UIAlertViewDelegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
