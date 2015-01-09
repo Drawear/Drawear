@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Profile.h"
 @interface profileService : NSObject
 
 + (BOOL) userLogin: (NSString*) phone password:(NSString*) password;
-
++ (BOOL) userLogin2: (NSString*) phone password:(NSString*) password;
++ (BOOL) userRegister:(NSString*)phone name:(NSString*)name password:(NSString*)password ;
 @end
 
 

@@ -10,6 +10,8 @@
 #import "UIImageViewEx.h"
 #import "UITextFieldEx.h"
 #import "CLImageEditor.h"
+#import <QuartzCore/QuartzCore.h>
+#import "DrawCompleteController.h"
 
 @interface EditorController() <CLImageEditorDelegate, CLImageEditorTransitionDelegate, CLImageEditorThemeDelegate>{
     
@@ -179,6 +181,25 @@ UIImageViewEx *background;
             [(UITextFieldEx *)currTop resignFirstResponder];
         }
         currTop = nil;
+    }
+}
+
+- (IBAction)drawDone:(id)sender {
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"finishDraw"]) // 要在属性里设置此名称
+    {
+        UIGraphicsBeginImageContext(self.drawView.bounds.size);
+        [self.drawView.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *image=UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    
+        UIViewController* view = segue.destinationViewController;
+        
+        [view setValue:image forKey:@"image"];
+        
     }
 }
 
