@@ -27,6 +27,8 @@ static Profile* currProfile=nil;
     currProfile.phone=profile.phone;
     currProfile.name=profile.name;
     currProfile.defaultAddress=profile.defaultAddress;
+    currProfile.addresses = profile.addresses;
+    currProfile.orders=profile.orders;
 }
 
 - (void) encodeWithCoder:(NSCoder *)encoder {
@@ -59,6 +61,8 @@ static Profile* currProfile=nil;
     }else{
         NSLog(@"False");
     }
+    
+//    NSLog(@"%@",documentPath);
     
 }
 

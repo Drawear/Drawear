@@ -1,34 +1,23 @@
 //
-//  OrderTableViewController.m
+//  AddressTableViewController.m
 //  Drawear
 //
-//  Created by 何文琦 on 1/8/15.
-//  Copyright (c) 2015 DrawearGroup. All rights reserved.
+//  Created by 钱晟 on 15/1/9.
+//  Copyright (c) 2015年 DrawearGroup. All rights reserved.
 //
 
-#import "OrderTableViewController.h"
+#import "AddressTableViewController.h"
 #import "Profile.h"
+#import "AddressInfo.h"
+#import "AddressAddViewController.h"
+@interface AddressTableViewController ()
 
-@interface OrderTableViewController ()
 
 @end
 
-@implementation OrderTableViewController
+@implementation AddressTableViewController
 
 - (void)viewDidLoad {
-//    Order* o1=[[Order alloc]init];
-//    o1.pictureName=@"picture1";
-//    o1.count=1;
-//    Order* o2=[[Order alloc]init];
-//    o2.pictureName=@"picture2";
-//    o2.count=2;
-//    Order* o3=[[Order alloc]init];
-//    o3.pictureName=@"picture3";
-//    o3.count=3;
-    
-    self.orders=[Profile getCurrProfile].orders;
-//    NSLog(@"count: %d",self.orders.count);
-//    self.orders = [NSMutableArray arrayWithObjects:o1,o2,o3, nil];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -36,9 +25,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    Profile* profile = [Profile getCurrProfile];
+    self.address = profile.addresses;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -47,51 +41,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.orders.count;
+    // Return the number of sections.
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+
+    // Return the number of rows in the section.
+    return [self.address count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger section = [indexPath section];
-    Order* order=[self.orders objectAtIndex:section];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addressCell" forIndexPath:indexPath];
     
-    if (indexPath.row==0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderRightCell" forIndexPath:indexPath];
-        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        cell.textLabel.text=[formatter stringFromDate:order.date];
-        cell.textLabel.textColor=[UIColor lightGrayColor];
-        cell.detailTextLabel.text=@"";
-        return cell;
-    }else if(indexPath.row==1){
-        UITableViewCell *cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"orderSubtitleCell"];
-        cell.imageView.image=[UIImage imageNamed:order.pictureName];
-        cell.textLabel.text=order.pictureName;
-        cell.detailTextLabel.text=[NSString stringWithFormat:@"x%d",order.count];
-        return cell;
-    }else{
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderRightCell" forIndexPath:indexPath];
-        cell.textLabel.text=[NSString stringWithFormat:@"Total Price: $%d",order.count*50];
-        cell.textLabel.textColor=[UIColor colorWithRed:234.0/255.0 green:113.0/255.0 blue:114.0/255.0 alpha:1.0];
-        cell.detailTextLabel.text=@"Delete";
-        cell.detailTextLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;//边框颜色,要为CGColor
-        cell.detailTextLabel.layer.borderWidth = 1;//边框宽度
-        cell.detailTextLabel.layer.cornerRadius = 10;
-        return cell;
-    }
-
+    AddressInfo* addr = [self.address objectAtIndex:indexPath.row];
+    cell.textLabel.text = [addr getAdd];
+    
+    
+    return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row==1) {
-        return 100;
-    }
-    return 50;
-}
 
 /*
 // Override to support conditional editing of the table view.
@@ -127,14 +97,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
 }
-*/
+
+
 
 @end

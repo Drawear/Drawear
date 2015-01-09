@@ -8,6 +8,8 @@
 
 #import "profileService.h"
 #import "HttpHelper.h"
+#import "AddressInfo.h"
+#import "Order.h"
 
 @implementation profileService
 
@@ -49,7 +51,17 @@
         Profile* profile=[[Profile alloc]init];
         profile.name=@"admin";
         profile.phone=phone;
+        profile.defaultAddress = 1;
+        NSMutableArray* addr = [[NSMutableArray alloc] init];
+        [addr addObject:[AddressInfo getExample]];
+        profile.addresses = addr;
+        
+        NSMutableArray* orders = [[NSMutableArray alloc] init];
+        [orders addObject:[Order getExample]];
+        profile.orders = orders;
+        
         [Profile setCurrProfile:profile];
+        [profile save];
         return true;
     }
     return false;
