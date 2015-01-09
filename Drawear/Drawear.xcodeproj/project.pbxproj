@@ -63,6 +63,7 @@
 		2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0151A5F813000AEFD55 /* AddressInfo.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
+		D6DABD391A5FD090006EAAF1 /* DrawCompleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DABD381A5FD090006EAAF1 /* DrawCompleteController.m */; };
 		D6F8F13E1A5F825600F5023E /* profileService.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F8F13D1A5F825600F5023E /* profileService.m */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +186,8 @@
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
 		2FE7DF681A56DA7200D27A03 /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterController.m; path = controller/RegisterController.m; sourceTree = "<group>"; };
+		D6DABD371A5FD090006EAAF1 /* DrawCompleteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawCompleteController.h; path = controller/DrawCompleteController.h; sourceTree = "<group>"; };
+		D6DABD381A5FD090006EAAF1 /* DrawCompleteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawCompleteController.m; path = controller/DrawCompleteController.m; sourceTree = "<group>"; };
 		D6F8F13C1A5F825600F5023E /* profileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileService.h; sourceTree = "<group>"; };
 		D6F8F13D1A5F825600F5023E /* profileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,6 +302,8 @@
 				2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */,
 				2F55EEBD1A5EC4F000AEFD55 /* AccountViewController.h */,
 				2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */,
+				D6DABD371A5FD090006EAAF1 /* DrawCompleteController.h */,
+				D6DABD381A5FD090006EAAF1 /* DrawCompleteController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				2F55F00A1A5EDD9B00AEFD55 /* UIDevice+SystemVersion.m in Sources */,
 				2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */,
 				2F55EFF71A5EDD9B00AEFD55 /* CLHueEffect.m in Sources */,
+				D6DABD391A5FD090006EAAF1 /* DrawCompleteController.m in Sources */,
 				2F55EFF51A5EDD9B00AEFD55 /* CLGloomEffect.m in Sources */,
 				183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */,
 				2F55EFF11A5EDD9B00AEFD55 /* CLBlurTool.m in Sources */,
