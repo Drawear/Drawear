@@ -181,7 +181,26 @@
             </objects>
             <point key="canvasLocation" x="1908" y="-398"/>
         </scene>
-        <!--View Controller-->
+        <!--My Profile-->
+        <scene sceneID="CxM-m0-ocL">
+            <objects>
+                <viewController id="DOj-wL-Gnb" customClass="AccountViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k3d-9I-xes"/>
+                        <viewControllerLayoutGuide type="bottom" id="ax8-Vi-rHc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3oV-Ez-hBt">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Profile" id="4NB-qd-k1c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwl-xR-9Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432.96" y="907.94666666666672"/>
+        </scene>
+        <!--Draw Complete Controller-->
         <scene sceneID="Dls-HY-RVC">
             <objects>
                 <viewController id="ZNj-OK-qCa" customClass="DrawCompleteController" sceneMemberID="viewController">

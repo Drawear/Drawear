@@ -300,8 +300,10 @@
 				2F55EEB81A5EBDF300AEFD55 /* HomeViewController.m */,
 				2F55EEBA1A5EC2FA00AEFD55 /* OrderTableViewController.h */,
 				2F55EEBB1A5EC2FA00AEFD55 /* OrderTableViewController.m */,
-				2F55F0171A5FBB1F00AEFD55 /* AccountTableViewController.h */,
-				2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */,
+				2F55EEBD1A5EC4F000AEFD55 /* AccountViewController.h */,
+				2F55EEBE1A5EC4F000AEFD55 /* AccountViewController.m */,
+				D6DABD371A5FD090006EAAF1 /* DrawCompleteController.h */,
+				D6DABD381A5FD090006EAAF1 /* DrawCompleteController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
