@@ -7,8 +7,11 @@
 //
 
 #import "LoginController.h"
+#import "profileService.h"
 
 @interface LoginController ()
+@property (weak, nonatomic) IBOutlet UITextField *phone;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
 
@@ -25,7 +28,15 @@
 }
 
 - (IBAction)buttonLogin:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"loginToMain" sender:self];
+    bool result = [profileService userLogin:self.phone.text password:self.password.text];
+    if (result) {
+        [self performSegueWithIdentifier:@"loginToMain" sender:self];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cannot login." message:@"Please check your login message." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        // optional - add more buttons
+        [alert show];
+    }
+
 }
 
 @end

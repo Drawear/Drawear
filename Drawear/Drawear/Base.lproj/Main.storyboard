@@ -76,6 +76,8 @@
                         <color key="backgroundColor" red="0.50980395078659058" green="0.85490202903747559" blue="0.85490202903747559" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="password" destination="W92-zB-YQS" id="0YB-Iq-yHL"/>
+                        <outlet property="phone" destination="ulC-JC-WRj" id="U6J-Sm-iBr"/>
                         <segue destination="Qav-br-qZD" kind="modal" identifier="loginToMain" id="fri-YL-VR6"/>
                     </connections>
                 </viewController>
