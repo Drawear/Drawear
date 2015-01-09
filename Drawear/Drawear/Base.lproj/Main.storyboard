@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qav-br-qZD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qav-br-qZD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -76,6 +76,8 @@
                         <color key="backgroundColor" red="0.50980395078659058" green="0.85490202903747559" blue="0.85490202903747559" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="password" destination="W92-zB-YQS" id="vwg-Rk-Pqz"/>
+                        <outlet property="phone" destination="ulC-JC-WRj" id="x48-3L-8mm"/>
                         <segue destination="Qav-br-qZD" kind="modal" identifier="loginToMain" id="fri-YL-VR6"/>
                     </connections>
                 </viewController>
@@ -424,16 +426,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-Bo-R7Z">
-                                <rect key="frame" x="259" y="644" width="95" height="30"/>
-                                <state key="normal" title="Back to login">
-                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="JIR-b9-enz"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drawear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K4-0u-piv">
                                 <rect key="frame" x="251" y="109" width="268" height="123"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
@@ -448,6 +440,16 @@
                                     <color key="titleColor" red="0.74111128829999995" green="0.67661442910000003" blue="0.34645691109999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-Bo-R7Z">
+                                <rect key="frame" x="259" y="644" width="95" height="30"/>
+                                <state key="normal" title="Back to login">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="JIR-b9-enz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90137431570000004" blue="0.60053604009999995" alpha="1" colorSpace="deviceRGB"/>
