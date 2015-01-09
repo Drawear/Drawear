@@ -10,6 +10,9 @@
 
 @interface Profile : NSObject
 
+@property NSString* phone;
+@property NSString* name;
+
 +(Profile*) getCurrProfile;
 +(void) setCurrProfile:(Profile*) profile;
 

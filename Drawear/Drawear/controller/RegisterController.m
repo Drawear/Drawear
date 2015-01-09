@@ -34,4 +34,14 @@
 }
 */
 
+- (IBAction)buttonRegister:(id)sender {
+    BOOL result = [profileService userRegister:self.phone.text name:self.name.text password:self.password.text];
+    if (result) {
+        [self performSegueWithIdentifier:@"registerToLogin" sender:self];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cannot register." message:@"Please check your register message." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        // optional - add more buttons
+        [alert show];
+    }
+}
 @end

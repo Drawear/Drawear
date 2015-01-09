@@ -19,7 +19,8 @@ static Profile* currProfile=nil;
 +(void) setCurrProfile:(Profile*) profile
 {
     currProfile=[[Profile alloc] init];
-    //set values
+    currProfile.phone=profile.phone;
+    currProfile.name=profile.name;
 }
 
 @end
