@@ -20,7 +20,6 @@
 
 @protocol changeAddrDelegate <NSObject>
 
-@optional
 - (void)addrTable:(AddressTableViewController*)tableView didChangeWithString:(NSString*)address;
 
 @end

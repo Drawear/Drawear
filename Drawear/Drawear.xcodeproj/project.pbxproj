@@ -65,6 +65,9 @@
 		2F55F0131A5F805C00AEFD55 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0121A5F805C00AEFD55 /* Order.m */; };
 		2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0151A5F813000AEFD55 /* AddressInfo.m */; };
 		2F55F0191A5FBB1F00AEFD55 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */; };
+		2F6E22951A604C7E001F30A5 /* DecorateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E22941A604C7E001F30A5 /* DecorateViewController.m */; };
+		2F6E229C1A604CC2001F30A5 /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E22981A604CC2001F30A5 /* ListItem.m */; };
+		2F6E229D1A604CC2001F30A5 /* POHorizontalList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E229A1A604CC2001F30A5 /* POHorizontalList.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
 		D639263E1A5FF3A50065BB3C /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D639263D1A5FF3A50065BB3C /* AddressTableViewController.m */; };
@@ -196,6 +199,13 @@
 		2F55F0151A5F813000AEFD55 /* AddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfo.m; sourceTree = "<group>"; };
 		2F55F0171A5FBB1F00AEFD55 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = controller/AccountTableViewController.h; sourceTree = "<group>"; };
 		2F55F0181A5FBB1F00AEFD55 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountTableViewController.m; path = controller/AccountTableViewController.m; sourceTree = "<group>"; };
+		2F6E22931A604C7E001F30A5 /* DecorateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecorateViewController.h; sourceTree = "<group>"; };
+		2F6E22941A604C7E001F30A5 /* DecorateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecorateViewController.m; sourceTree = "<group>"; };
+		2F6E22971A604CC2001F30A5 /* ListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		2F6E22981A604CC2001F30A5 /* ListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
+		2F6E22991A604CC2001F30A5 /* POHorizontalList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POHorizontalList.h; sourceTree = "<group>"; };
+		2F6E229A1A604CC2001F30A5 /* POHorizontalList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POHorizontalList.m; sourceTree = "<group>"; };
+		2F6E229B1A604CC2001F30A5 /* POHorizontalListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POHorizontalListDelegate.h; sourceTree = "<group>"; };
 		2FE7DF641A56D9AB00D27A03 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = controller/LoginController.h; sourceTree = "<group>"; };
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 		2F50A10F1A555E8700D407B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F6E22961A604CC2001F30A5 /* POHorizontalList */,
 				2F55EF991A5EDD9B00AEFD55 /* CLImageEditor */,
 				2F50A1101A555E8700D407B3 /* Info.plist */,
 				2F50A1111A555E8700D407B3 /* main.m */,
@@ -314,6 +325,8 @@
 		2F50A1351A557BA000D407B3 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				2F6E22931A604C7E001F30A5 /* DecorateViewController.h */,
+				2F6E22941A604C7E001F30A5 /* DecorateViewController.m */,
 				1895D25B1A5FE874003E8901 /* DrawCompleteController.h */,
 				1895D25C1A5FE874003E8901 /* DrawCompleteController.m */,
 				2FE7DF641A56D9AB00D27A03 /* LoginController.h */,
@@ -546,6 +559,19 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		2F6E22961A604CC2001F30A5 /* POHorizontalList */ = {
+			isa = PBXGroup;
+			children = (
+				2F6E22971A604CC2001F30A5 /* ListItem.h */,
+				2F6E22981A604CC2001F30A5 /* ListItem.m */,
+				2F6E22991A604CC2001F30A5 /* POHorizontalList.h */,
+				2F6E229A1A604CC2001F30A5 /* POHorizontalList.m */,
+				2F6E229B1A604CC2001F30A5 /* POHorizontalListDelegate.h */,
+			);
+			name = POHorizontalList;
+			path = "../../../../course/project management/demo/POHorizontalList-master/POHorizontalList/POHorizontalList";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,6 +682,7 @@
 				1895D25A1A5FDEBC003E8901 /* TouchDrawView.m in Sources */,
 				183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */,
 				2F55EFF11A5EDD9B00AEFD55 /* CLBlurTool.m in Sources */,
+				2F6E22951A604C7E001F30A5 /* DecorateViewController.m in Sources */,
 				2F55F0041A5EDD9B00AEFD55 /* CLImageEditorTheme+Private.m in Sources */,
 				2F55F0001A5EDD9B00AEFD55 /* CLRotateTool.m in Sources */,
 				1895D25D1A5FE874003E8901 /* DrawCompleteController.m in Sources */,
@@ -682,6 +709,7 @@
 				2F55F0191A5FBB1F00AEFD55 /* AccountTableViewController.m in Sources */,
 				2F55EEBC1A5EC2FA00AEFD55 /* OrderTableViewController.m in Sources */,
 				2F55EFF01A5EDD9B00AEFD55 /* CLAdjustmentTool.m in Sources */,
+				2F6E229D1A604CC2001F30A5 /* POHorizontalList.m in Sources */,
 				2F55EFFF1A5EDD9B00AEFD55 /* CLImageToolBase.m in Sources */,
 				2F55F0081A5EDD9B00AEFD55 /* CLClassList.m in Sources */,
 				18DA2F871A591B7C007C7B23 /* EditorController.m in Sources */,
@@ -693,6 +721,7 @@
 				2F55F00C1A5EDD9B00AEFD55 /* UIView+Frame.m in Sources */,
 				2F55EFFB1A5EDD9B00AEFD55 /* CLEffectBase.m in Sources */,
 				2F55EFF41A5EDD9B00AEFD55 /* CLBloomEffect.m in Sources */,
+				2F6E229C1A604CC2001F30A5 /* ListItem.m in Sources */,
 				2F55EFF21A5EDD9B00AEFD55 /* CLClippingTool.m in Sources */,
 				D6F8F13E1A5F825600F5023E /* profileService.m in Sources */,
 				2F55F0061A5EDD9B00AEFD55 /* CLToolbarMenuItem.m in Sources */,

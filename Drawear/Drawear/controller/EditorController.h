@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ColorPicker.h"
 #import "TouchDrawView.h"
+#import "DecorateViewController.h"
 
-@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITabBarDelegate, UIActionSheetDelegate, UIScrollViewDelegate,ColorPickerDelegate>
+@interface EditorController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITabBarDelegate, UIActionSheetDelegate, UIScrollViewDelegate,ColorPickerDelegate,addItemDelegate>
 {
     BOOL isSelectedColor;
 }

@@ -217,9 +217,11 @@ UIImageViewEx *background;
 
 -(void)aColorPickerIsSelected:(UIColor *)color{
     [drawArea setDrawColor:color];
-
+}
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"drawComplete"]) {
+        [self tapBackground];
+        [self.undoButton setHidden:YES];
         UIGraphicsBeginImageContext(self.drawView.bounds.size);
         [self.drawView.layer renderInContext:UIGraphicsGetCurrentContext()];
         UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
@@ -227,6 +229,9 @@ UIImageViewEx *background;
         
         UIViewController* view = segue.destinationViewController;
         [view setValue:image forKey:@"image"];
+    }else if([segue.identifier isEqualToString:@"getDecorate"]){
+        DecorateViewController* controller=[segue destinationViewController];
+        controller.delegate=self;
     }
 
 }
@@ -246,6 +251,12 @@ UIImageViewEx *background;
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     
+
+}
+
+-(void)didAddItem:(UIImage *)image{
+    [self addImageByImage:image];
+    NSLog(@"getImage");
 }
 
 @end

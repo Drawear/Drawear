@@ -16,6 +16,7 @@
 @end
 
 @implementation AddressTableViewController
+@synthesize delegate = _delegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,6 +63,9 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"test");
+}
 
 /*
 // Override to support conditional editing of the table view.

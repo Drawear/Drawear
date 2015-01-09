@@ -53,15 +53,19 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"changeAddr"]) {
+        AddressTableViewController* controller=[segue destinationViewController];
+        controller.delegate=self;
+    }
 }
-*/
+
 - (IBAction)createOrder:(id)sender {
     Order* newOrder = [[Order alloc] init];
     newOrder.picture = self.image;
