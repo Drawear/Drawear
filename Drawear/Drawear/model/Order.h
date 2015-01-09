@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "AddressInfo.h"
-@interface Order : NSObject
+@interface Order : NSObject<NSCoding>
 
 @property NSString* pictureName;
-@property AddressInfo* address;
+@property int address;
 @property UIImage* picture;
 @property NSString* requirement;
 @property NSString* size;
+@property int count;
 @property int status;
 
 @end

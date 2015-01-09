@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AddressInfo : NSObject
+@interface AddressInfo : NSObject<NSCoding>
 
 @property NSString* province;
 @property NSString* city;
-@property NSString* address;
+@property NSString* street;
 @property NSString* postcode;
+
 @end
