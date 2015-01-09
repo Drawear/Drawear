@@ -59,12 +59,17 @@
     AddressInfo* addr = [self.address objectAtIndex:indexPath.row];
     cell.textLabel.text = [addr getAdd];
     
-    
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"test");
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AddressInfo* addr = [self.address objectAtIndex:indexPath.row];
+    [self.delegate addrTable:self didChangeWithString:[addr getAdd]];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
 }
 
 /*
