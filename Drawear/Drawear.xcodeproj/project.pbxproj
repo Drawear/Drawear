@@ -61,6 +61,7 @@
 		2F55F00D1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EFEB1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
+		D6F8F13E1A5F825600F5023E /* profileService.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F8F13D1A5F825600F5023E /* profileService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,8 @@
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
 		2FE7DF681A56DA7200D27A03 /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterController.m; path = controller/RegisterController.m; sourceTree = "<group>"; };
+		D6F8F13C1A5F825600F5023E /* profileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileService.h; sourceTree = "<group>"; };
+		D6F8F13D1A5F825600F5023E /* profileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +304,8 @@
 				2F55EEB21A5EB8B100AEFD55 /* HttpHelper.m */,
 				2F55EEB31A5EB8B100AEFD55 /* Profile.h */,
 				2F55EEB41A5EB8B100AEFD55 /* Profile.m */,
+				D6F8F13C1A5F825600F5023E /* profileService.h */,
+				D6F8F13D1A5F825600F5023E /* profileService.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 				2F55EFFB1A5EDD9B00AEFD55 /* CLEffectBase.m in Sources */,
 				2F55EFF41A5EDD9B00AEFD55 /* CLBloomEffect.m in Sources */,
 				2F55EFF21A5EDD9B00AEFD55 /* CLClippingTool.m in Sources */,
+				D6F8F13E1A5F825600F5023E /* profileService.m in Sources */,
 				2F55F0061A5EDD9B00AEFD55 /* CLToolbarMenuItem.m in Sources */,
 				2F55F00B1A5EDD9B00AEFD55 /* UIImage+Utility.m in Sources */,
 				2F55EFFD1A5EDD9B00AEFD55 /* CLFilterBase.m in Sources */,

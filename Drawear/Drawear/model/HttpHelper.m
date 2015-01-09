@@ -8,7 +8,7 @@
 
 #import "HttpHelper.h"
 
-static NSString* baseUrl=@"localhost:8888";
+static NSString* baseUrl=@"http://localhost:8080/Drawear/";
 
 @implementation HttpHelper
 
@@ -39,16 +39,20 @@ static NSString* baseUrl=@"localhost:8888";
 
 +(NSData *)postWithEndpoint:(NSString*) endpoint parameters:(NSDictionary*)param
 {
-    NSURL *url = [NSURL URLWithString:endpoint relativeToURL:[NSURL URLWithString:baseUrl]];
+    NSURL *url = [[NSURL alloc] initWithString:endpoint relativeToURL:[NSURL URLWithString:baseUrl]];
 
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [archiver encodeObject:param];
-    [archiver finishEncoding];
+    NSMutableString *paramStr=[[NSMutableString alloc] initWithCapacity:10];
+    [paramStr setString:@""];
+    for (NSString *key in param) {
+        NSLog(@"key: %@ value: %@", key, param[key]);
+        [paramStr appendFormat:@"%@=%@&",key, param[key]];
+    }
+    NSString* data=[paramStr substringToIndex:[paramStr length]-1];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20];
+    [request addValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:data];
+    [request setHTTPBody:[data dataUsingEncoding:NSUTF8StringEncoding]];
     NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     
     return received;
