@@ -204,6 +204,18 @@ TouchDrawView *drawArea;
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"drawComplete"]) {
+        UIGraphicsBeginImageContext(self.drawView.bounds.size);
+        [self.drawView.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        UIViewController* view = segue.destinationViewController;
+        [view setValue:image forKey:@"image"];
+    }
+}
+
 #pragma mark- CLImageEditor delegate
 
 - (void)imageEditor:(CLImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image
