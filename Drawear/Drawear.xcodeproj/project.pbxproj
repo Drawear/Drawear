@@ -11,6 +11,7 @@
 		1895D2581A5FDEBC003E8901 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D2531A5FDEBC003E8901 /* ColorPicker.m */; };
 		1895D2591A5FDEBC003E8901 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D2551A5FDEBC003E8901 /* Line.m */; };
 		1895D25A1A5FDEBC003E8901 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D2571A5FDEBC003E8901 /* TouchDrawView.m */; };
+		1895D25D1A5FE874003E8901 /* DrawCompleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D25C1A5FE874003E8901 /* DrawCompleteController.m */; };
 		18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */; };
 		18DA2F871A591B7C007C7B23 /* EditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA2F861A591B7C007C7B23 /* EditorController.m */; };
 		2F50A1121A555E8700D407B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50A1111A555E8700D407B3 /* main.m */; };
@@ -88,6 +89,8 @@
 		1895D2551A5FDEBC003E8901 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Line.m; path = view/Line.m; sourceTree = "<group>"; };
 		1895D2561A5FDEBC003E8901 /* TouchDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchDrawView.h; path = view/TouchDrawView.h; sourceTree = "<group>"; };
 		1895D2571A5FDEBC003E8901 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchDrawView.m; path = view/TouchDrawView.m; sourceTree = "<group>"; };
+		1895D25B1A5FE874003E8901 /* DrawCompleteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawCompleteController.h; path = controller/DrawCompleteController.h; sourceTree = "<group>"; };
+		1895D25C1A5FE874003E8901 /* DrawCompleteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawCompleteController.m; path = controller/DrawCompleteController.m; sourceTree = "<group>"; };
 		18DA2F7B1A59177D007C7B23 /* UIImageViewEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIImageViewEx.h; path = view/UIImageViewEx.h; sourceTree = "<group>"; };
 		18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageViewEx.m; path = view/UIImageViewEx.m; sourceTree = "<group>"; };
 		18DA2F851A591B7C007C7B23 /* EditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorController.h; path = controller/EditorController.h; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 		2F50A1351A557BA000D407B3 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1895D25B1A5FE874003E8901 /* DrawCompleteController.h */,
+				1895D25C1A5FE874003E8901 /* DrawCompleteController.m */,
 				2FE7DF641A56D9AB00D27A03 /* LoginController.h */,
 				2FE7DF651A56D9AB00D27A03 /* LoginController.m */,
 				2FE7DF671A56DA7200D27A03 /* RegisterController.h */,
@@ -637,6 +642,7 @@
 				2F55EFF11A5EDD9B00AEFD55 /* CLBlurTool.m in Sources */,
 				2F55F0041A5EDD9B00AEFD55 /* CLImageEditorTheme+Private.m in Sources */,
 				2F55F0001A5EDD9B00AEFD55 /* CLRotateTool.m in Sources */,
+				1895D25D1A5FE874003E8901 /* DrawCompleteController.m in Sources */,
 				2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */,
 				2F55F0051A5EDD9B00AEFD55 /* CLImageToolInfo+Private.m in Sources */,
 				2F55F0131A5F805C00AEFD55 /* Order.m in Sources */,
