@@ -9,8 +9,9 @@
 #import "EditorController.h"
 #import "UIImageViewEx.h"
 #import "UITextFieldEx.h"
+#import "CLImageEditor.h"
 
-@interface EditorController (){
+@interface EditorController() <CLImageEditorDelegate, CLImageEditorTransitionDelegate, CLImageEditorThemeDelegate>{
     
 }
 
@@ -59,6 +60,8 @@ UIImageViewEx *background;
 }
 
 - (IBAction)addPictureTapped:(id)sender {
+//    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Camera", @"Photo Library", nil];
+//    [sheet showInView:self.view];
     if (self.picker == nil) {
         self.picker = [[UIImagePickerController alloc] init];
         self.picker.delegate = self;
@@ -81,8 +84,13 @@ UIImageViewEx *background;
     [self dismissViewControllerAnimated:YES completion:nil];
     
     UIImage *fullImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    [self addImageByImage:fullImage];
+    if(fullImage){
+        CLImageEditor *editor = [[CLImageEditor alloc] initWithImage:fullImage delegate:self];
+        
+        [self presentViewController:editor animated:YES completion:nil];
+        //[editor showInViewController:self withImageView:_imageView];
+    }
+//    [self addImageByImage:fullImage];
 }
 
 - (void)setCurrTop: (UIView*) view {
@@ -174,5 +182,21 @@ UIImageViewEx *background;
     }
 }
 
+#pragma mark- CLImageEditor delegate
+
+- (void)imageEditor:(CLImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image
+{
+    UIImage* newImage = image;
+    [self addImageByImage:newImage];
+
+    [editor dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark- Actionsheet delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+}
 
 @end
