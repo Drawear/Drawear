@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Profile : NSObject
+@interface Profile : NSObject<NSCoding>
 
 @property NSString* phone;
 @property NSString* name;
+@property int defaultAddress;
 
 +(Profile*) getCurrProfile;
 +(void) setCurrProfile:(Profile*) profile;

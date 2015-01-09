@@ -7,7 +7,28 @@
 //
 
 #import "AddressInfo.h"
+#define oProvinceKey @"province"
+#define oCityKey @"city"
+#define oStreetKey @"street"
+#define oPostcodeKey @"postcode"
 
 @implementation AddressInfo
+
+- (void) encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:self.province forKey:oProvinceKey];
+    [encoder encodeObject:self.city forKey:oCityKey];
+    [encoder encodeObject:self.street forKey:oStreetKey];
+    [encoder encodeObject:self.postcode forKey:oPostcodeKey];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if ((self = [super init])) {
+        self.province= [decoder decodeObjectForKey:oProvinceKey];
+        self.city=[decoder decodeObjectForKey:oCityKey];
+        self.street=[decoder decodeObjectForKey:oStreetKey];
+        self.postcode=[decoder decodeObjectForKey:oPostcodeKey];
+    }
+    return self;
+}
 
 @end
