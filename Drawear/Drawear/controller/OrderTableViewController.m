@@ -15,6 +15,13 @@
 @implementation OrderTableViewController
 
 - (void)viewDidLoad {
+    Order* o1=[[Order alloc]init];
+    o1.pictureName=@"picture1";
+    Order* o2=[[Order alloc]init];
+    o2.pictureName=@"picture2";
+    Order* o3=[[Order alloc]init];
+    o3.pictureName=@"picture3";
+    self.orders=[NSArray arrayWithObjects: o1,o2,o3,nil];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -22,6 +29,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +40,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return self.orders.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSUInteger section = [indexPath section];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderCell" forIndexPath:indexPath];
+    Order* order=[self.orders objectAtIndex:section];
     
     // Configure the cell...
+    cell.textLabel.text=order.pictureName;
+    cell.detailTextLabel.text=@"*1";
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

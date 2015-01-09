@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Order.h"
 @interface OrderTableViewController : UITableViewController
-
+@property NSArray* orders;
 @end

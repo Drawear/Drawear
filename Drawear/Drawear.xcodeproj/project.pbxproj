@@ -59,6 +59,8 @@
 		2F55F00B1A5EDD9B00AEFD55 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EFE61A5EDD9B00AEFD55 /* UIImage+Utility.m */; };
 		2F55F00C1A5EDD9B00AEFD55 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EFE81A5EDD9B00AEFD55 /* UIView+Frame.m */; };
 		2F55F00D1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55EFEB1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m */; };
+		2F55F0131A5F805C00AEFD55 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0121A5F805C00AEFD55 /* Order.m */; };
+		2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55F0151A5F813000AEFD55 /* AddressInfo.m */; };
 		2FE7DF661A56D9AB00D27A03 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF651A56D9AB00D27A03 /* LoginController.m */; };
 		2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7DF681A56DA7200D27A03 /* RegisterController.m */; };
 /* End PBXBuildFile section */
@@ -174,6 +176,10 @@
 		2F55EFE81A5EDD9B00AEFD55 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		2F55EFEA1A5EDD9B00AEFD55 /* _CLImageEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CLImageEditorViewController.h; sourceTree = "<group>"; };
 		2F55EFEB1A5EDD9B00AEFD55 /* _CLImageEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CLImageEditorViewController.m; sourceTree = "<group>"; };
+		2F55F0111A5F805C00AEFD55 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		2F55F0121A5F805C00AEFD55 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		2F55F0141A5F813000AEFD55 /* AddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfo.h; sourceTree = "<group>"; };
+		2F55F0151A5F813000AEFD55 /* AddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfo.m; sourceTree = "<group>"; };
 		2FE7DF641A56D9AB00D27A03 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = controller/LoginController.h; sourceTree = "<group>"; };
 		2FE7DF651A56D9AB00D27A03 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = controller/LoginController.m; sourceTree = "<group>"; };
 		2FE7DF671A56DA7200D27A03 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterController.h; path = controller/RegisterController.h; sourceTree = "<group>"; };
@@ -301,6 +307,10 @@
 				2F55EEB21A5EB8B100AEFD55 /* HttpHelper.m */,
 				2F55EEB31A5EB8B100AEFD55 /* Profile.h */,
 				2F55EEB41A5EB8B100AEFD55 /* Profile.m */,
+				2F55F0111A5F805C00AEFD55 /* Order.h */,
+				2F55F0121A5F805C00AEFD55 /* Order.m */,
+				2F55F0141A5F813000AEFD55 /* AddressInfo.h */,
+				2F55F0151A5F813000AEFD55 /* AddressInfo.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -599,6 +609,7 @@
 			files = (
 				18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */,
 				2F55F00A1A5EDD9B00AEFD55 /* UIDevice+SystemVersion.m in Sources */,
+				2F55F0161A5F813000AEFD55 /* AddressInfo.m in Sources */,
 				2F55EFF71A5EDD9B00AEFD55 /* CLHueEffect.m in Sources */,
 				2F55EFF51A5EDD9B00AEFD55 /* CLGloomEffect.m in Sources */,
 				183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */,
@@ -607,6 +618,7 @@
 				2F55F0001A5EDD9B00AEFD55 /* CLRotateTool.m in Sources */,
 				2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */,
 				2F55F0051A5EDD9B00AEFD55 /* CLImageToolInfo+Private.m in Sources */,
+				2F55F0131A5F805C00AEFD55 /* Order.m in Sources */,
 				2F55EFF31A5EDD9B00AEFD55 /* CLDrawTool.m in Sources */,
 				2F55EFEF1A5EDD9B00AEFD55 /* CLImageToolInfo.m in Sources */,
 				2F55EEB91A5EBDF300AEFD55 /* HomeViewController.m in Sources */,
