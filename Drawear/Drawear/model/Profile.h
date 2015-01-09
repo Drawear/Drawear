@@ -13,11 +13,8 @@
 @property NSString* phone;
 @property NSString* name;
 @property int defaultAddress;
-@property NSMutableArray* orders;
-@property NSMutableArray* addresses;
 
 +(Profile*) getCurrProfile;
 +(void) setCurrProfile:(Profile*) profile;
--(void)loadSavedData;
-- (void)save;
+
 @end
