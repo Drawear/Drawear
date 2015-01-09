@@ -1,30 +1,21 @@
 //
-//  OrderTableViewController.m
+//  AccountTableViewController.m
 //  Drawear
 //
-//  Created by 何文琦 on 1/8/15.
+//  Created by 何文琦 on 1/9/15.
 //  Copyright (c) 2015 DrawearGroup. All rights reserved.
 //
 
-#import "OrderTableViewController.h"
+#import "AccountTableViewController.h"
 
-@interface OrderTableViewController ()
+@interface AccountTableViewController ()
 
 @end
 
-@implementation OrderTableViewController
+@implementation AccountTableViewController
 
 - (void)viewDidLoad {
-    Order* o1=[[Order alloc]init];
-    o1.pictureName=@"picture1";
-    o1.count=1;
-    Order* o2=[[Order alloc]init];
-    o2.pictureName=@"picture2";
-    o2.count=2;
-    Order* o3=[[Order alloc]init];
-    o3.pictureName=@"picture3";
-    o3.count=3;
-    self.orders=[NSArray arrayWithObjects: o1,o2,o3,nil];
+    
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -32,7 +23,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,49 +33,41 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.orders.count;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (section==0) {
+        return 3;
+    }
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger section = [indexPath section];
-    Order* order=[self.orders objectAtIndex:section];
-
-    if (indexPath.row==0) {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderRightCell" forIndexPath:indexPath];
-        cell.textLabel.text=@"2014-12-25 17:55:24 Success";
-        cell.textLabel.textColor=[UIColor lightGrayColor];
-        cell.detailTextLabel.text=@"Show Detail";
-        return cell;
-    }else if(indexPath.row==1){
-        UITableViewCell *cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"orderSubtitleCell"];
-        cell.imageView.image=[UIImage imageNamed:@"juhua.jpg"];
-        cell.textLabel.text=order.pictureName;
-        cell.detailTextLabel.text=[NSString stringWithFormat:@"x%d",order.count];
-        return cell;
-    }else{
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderRightCell" forIndexPath:indexPath];
-        cell.textLabel.text=[NSString stringWithFormat:@"Total Price: $%d",order.count*50];
-        cell.textLabel.textColor=[UIColor colorWithRed:234.0/255.0 green:113.0/255.0 blue:114.0/255.0 alpha:1.0];
-        cell.detailTextLabel.text=@"Delete";
-        cell.detailTextLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;//边框颜色,要为CGColor
-        cell.detailTextLabel.layer.borderWidth = 1;//边框宽度
-        cell.detailTextLabel.layer.cornerRadius = 10;
+    if (indexPath.section==0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell" forIndexPath:indexPath];
+        if(indexPath.row==0){
+            cell.textLabel.text=@"Change Password";
+        }else if(indexPath.row==1){
+            cell.textLabel.text=@"Change Default Address";
+        }else{
+            cell.textLabel.text=@"About Drawear";
+        }
         return cell;
     }
-
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row==1) {
-        return 100;
+    else{
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+        cell.textLabel.text=@"Logout";
+        cell.textLabel.textColor=[UIColor whiteColor];
+        cell.textLabel.textAlignment=NSTextAlignmentCenter;
+        cell.backgroundColor=[UIColor colorWithRed:234.0/255.0 green:113.0/255.0 blue:114.0/255.0 alpha:1.0];
+        return cell;
     }
-    return 50;
+    
+    
 }
+
 
 /*
 // Override to support conditional editing of the table view.

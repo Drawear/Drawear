@@ -10,7 +10,6 @@
 
 @interface AddressInfo : NSObject<NSCoding>
 
-@property int addressID;
 @property NSString* province;
 @property NSString* city;
 @property NSString* street;
