@@ -20,16 +20,17 @@
 
 //@property (strong, nonatomic) IBOutlet UIView *drawView;
 @property (weak, nonatomic) IBOutlet UIView *drawView;
+@property (weak, nonatomic) IBOutlet UIButton *undoButton;
 
 @end
 
 @implementation EditorController
 
 @synthesize picker = _picker;
+@synthesize drawArea;
 
 UIView *currTop;
 UIImageViewEx *background;
-TouchDrawView *drawArea;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,17 +59,17 @@ TouchDrawView *drawArea;
     [background enableTapAsBackground];
     
     drawArea = [[TouchDrawView alloc] initWithFrame:background.frame];
+    [drawArea initButton];
     [drawArea setCenter:self.drawView.center];
     [drawArea setFrame:self.drawView.frame];
     [drawArea setContentMode: UIViewContentModeScaleAspectFit];
     
     [self setBackgroundByPath: @"T-shirt.png"];
     
+    [self.undoButton setHidden:YES];
+    
     [self.drawView addSubview:background];
     [self.drawView addSubview:drawArea];
-    [drawArea setBackgroundColor:[UIColor whiteColor]];
-    
-//    [drawArea setHidden:YES];
     
 }
 
@@ -82,19 +83,28 @@ TouchDrawView *drawArea;
         self.picker.allowsEditing = NO;
     }
     [self presentViewController:_picker animated:YES completion:nil];
+    [self switchDrawArea];
 }
 
 - (IBAction)addTextTapped:(id)sender {
     [self addTextByText:@"请输入文字"];
+    [self switchDrawArea];
 }
 
 - (IBAction)addDrawTapped:(id)sender {
-    if (drawArea.isHidden) {
-        [drawArea setHidden:NO];
-    }else{
-        [drawArea setHidden:YES];
-    }
-    
+    [self.undoButton setHidden:drawArea.canDraw];
+    [self.drawView bringSubviewToFront:self.undoButton];
+    [self switchDrawArea];
+}
+
+- (IBAction)undoInController:(id)sender
+{
+    [drawArea undo];
+}
+
+- (void)switchDrawArea
+{
+    [drawArea switchVisible];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -192,6 +202,7 @@ TouchDrawView *drawArea;
 
 - (void)tapBackground
 {
+    NSLog(@"tapBackground\n");
     if(currTop != nil){
         if ([currTop isKindOfClass:[UIImageViewEx class]]) {
             [(UIImageViewEx *)currTop setTop: NO];
@@ -202,6 +213,10 @@ TouchDrawView *drawArea;
         }
         currTop = nil;
     }
+}
+
+-(void)aColorPickerIsSelected:(UIColor *)color{
+    [drawArea setDrawColor:color];
 }
 
 #pragma mark- CLImageEditor delegate

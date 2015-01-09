@@ -9,7 +9,6 @@
 #import <UIKit/UiKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "EditorController.h"
-#import "UITextFieldEx.h"
 
 @interface UITextFieldEx : UITextField<UIGestureRecognizerDelegate, UITextFieldDelegate>
 {

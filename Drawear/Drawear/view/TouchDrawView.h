@@ -14,7 +14,10 @@
 @property (nonatomic) Line *currentLine;
 @property (nonatomic) NSMutableArray *linesCompleted;
 @property (nonatomic) UIColor *drawColor;
-@property (nonatomic) UIButton *undoBtn;
+@property (nonatomic) BOOL canDraw;
 
 - (void)undo;
+
+- (void)initButton;
+- (void)switchVisible;
 @end
