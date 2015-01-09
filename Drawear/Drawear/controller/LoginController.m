@@ -28,7 +28,7 @@
 }
 
 - (IBAction)buttonLogin:(UIButton *)sender {
-    bool result = [profileService userLogin:self.phone.text password:self.password.text];
+    BOOL result = [profileService userLogin2:self.phone.text password:self.password.text];
     if (result) {
         [self performSegueWithIdentifier:@"loginToMain" sender:self];
     }else{
