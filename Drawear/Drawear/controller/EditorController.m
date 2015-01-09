@@ -12,6 +12,7 @@
 #import "CLImageEditor.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DrawCompleteController.h"
+#import "TouchDrawView.h"
 
 @interface EditorController() <CLImageEditorDelegate, CLImageEditorTransitionDelegate, CLImageEditorThemeDelegate>{
     
@@ -28,6 +29,7 @@
 
 UIView *currTop;
 UIImageViewEx *background;
+TouchDrawView *drawArea;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,9 +57,18 @@ UIImageViewEx *background;
     [background setController: self];
     [background enableTapAsBackground];
     
+    drawArea = [[TouchDrawView alloc] initWithFrame:background.frame];
+    [drawArea setCenter:self.drawView.center];
+    [drawArea setFrame:self.drawView.frame];
+    [drawArea setContentMode: UIViewContentModeScaleAspectFit];
+    
     [self setBackgroundByPath: @"T-shirt.png"];
     
     [self.drawView addSubview:background];
+    [self.drawView addSubview:drawArea];
+    [drawArea setBackgroundColor:[UIColor whiteColor]];
+    
+//    [drawArea setHidden:YES];
     
 }
 
@@ -75,6 +86,15 @@ UIImageViewEx *background;
 
 - (IBAction)addTextTapped:(id)sender {
     [self addTextByText:@"请输入文字"];
+}
+
+- (IBAction)addDrawTapped:(id)sender {
+    if (drawArea.isHidden) {
+        [drawArea setHidden:NO];
+    }else{
+        [drawArea setHidden:YES];
+    }
+    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

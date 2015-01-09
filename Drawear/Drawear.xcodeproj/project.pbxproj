@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 183AD32E1A5AB193000FFFD6 /* UITextFieldEx.m */; };
+		1895D2581A5FDEBC003E8901 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D2531A5FDEBC003E8901 /* ColorPicker.m */; };
+		1895D2591A5FDEBC003E8901 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D2551A5FDEBC003E8901 /* Line.m */; };
+		1895D25A1A5FDEBC003E8901 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895D2571A5FDEBC003E8901 /* TouchDrawView.m */; };
 		18DA2F7D1A59179D007C7B23 /* UIImageViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */; };
 		18DA2F871A591B7C007C7B23 /* EditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA2F861A591B7C007C7B23 /* EditorController.m */; };
 		2F50A1121A555E8700D407B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50A1111A555E8700D407B3 /* main.m */; };
@@ -80,6 +83,12 @@
 /* Begin PBXFileReference section */
 		183AD32D1A5AB193000FFFD6 /* UITextFieldEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldEx.h; path = view/UITextFieldEx.h; sourceTree = "<group>"; };
 		183AD32E1A5AB193000FFFD6 /* UITextFieldEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITextFieldEx.m; path = view/UITextFieldEx.m; sourceTree = "<group>"; };
+		1895D2521A5FDEBC003E8901 /* ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorPicker.h; path = view/ColorPicker.h; sourceTree = "<group>"; };
+		1895D2531A5FDEBC003E8901 /* ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorPicker.m; path = view/ColorPicker.m; sourceTree = "<group>"; };
+		1895D2541A5FDEBC003E8901 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Line.h; path = view/Line.h; sourceTree = "<group>"; };
+		1895D2551A5FDEBC003E8901 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Line.m; path = view/Line.m; sourceTree = "<group>"; };
+		1895D2561A5FDEBC003E8901 /* TouchDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchDrawView.h; path = view/TouchDrawView.h; sourceTree = "<group>"; };
+		1895D2571A5FDEBC003E8901 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchDrawView.m; path = view/TouchDrawView.m; sourceTree = "<group>"; };
 		18DA2F7B1A59177D007C7B23 /* UIImageViewEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIImageViewEx.h; path = view/UIImageViewEx.h; sourceTree = "<group>"; };
 		18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageViewEx.m; path = view/UIImageViewEx.m; sourceTree = "<group>"; };
 		18DA2F851A591B7C007C7B23 /* EditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorController.h; path = controller/EditorController.h; sourceTree = "<group>"; };
@@ -217,6 +226,12 @@
 		18DA2F771A59172C007C7B23 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1895D2521A5FDEBC003E8901 /* ColorPicker.h */,
+				1895D2531A5FDEBC003E8901 /* ColorPicker.m */,
+				1895D2541A5FDEBC003E8901 /* Line.h */,
+				1895D2551A5FDEBC003E8901 /* Line.m */,
+				1895D2561A5FDEBC003E8901 /* TouchDrawView.h */,
+				1895D2571A5FDEBC003E8901 /* TouchDrawView.m */,
 				18DA2F7B1A59177D007C7B23 /* UIImageViewEx.h */,
 				18DA2F7C1A59179D007C7B23 /* UIImageViewEx.m */,
 				183AD32D1A5AB193000FFFD6 /* UITextFieldEx.h */,
@@ -623,6 +638,7 @@
 				2F55EFF71A5EDD9B00AEFD55 /* CLHueEffect.m in Sources */,
 				D6DABD391A5FD090006EAAF1 /* DrawCompleteController.m in Sources */,
 				2F55EFF51A5EDD9B00AEFD55 /* CLGloomEffect.m in Sources */,
+				1895D25A1A5FDEBC003E8901 /* TouchDrawView.m in Sources */,
 				183AD32F1A5AB193000FFFD6 /* UITextFieldEx.m in Sources */,
 				2F55EFF11A5EDD9B00AEFD55 /* CLBlurTool.m in Sources */,
 				2F55F0041A5EDD9B00AEFD55 /* CLImageEditorTheme+Private.m in Sources */,
@@ -630,6 +646,7 @@
 				2FE7DF691A56DA7200D27A03 /* RegisterController.m in Sources */,
 				2F55F0051A5EDD9B00AEFD55 /* CLImageToolInfo+Private.m in Sources */,
 				2F55F0131A5F805C00AEFD55 /* Order.m in Sources */,
+				1895D2591A5FDEBC003E8901 /* Line.m in Sources */,
 				2F55EFF31A5EDD9B00AEFD55 /* CLDrawTool.m in Sources */,
 				2F55EFEF1A5EDD9B00AEFD55 /* CLImageToolInfo.m in Sources */,
 				2F55EEB91A5EBDF300AEFD55 /* HomeViewController.m in Sources */,
@@ -652,6 +669,7 @@
 				18DA2F871A591B7C007C7B23 /* EditorController.m in Sources */,
 				2F55EFED1A5EDD9B00AEFD55 /* CLImageEditor.m in Sources */,
 				2F50A1121A555E8700D407B3 /* main.m in Sources */,
+				1895D2581A5FDEBC003E8901 /* ColorPicker.m in Sources */,
 				2F55EFF81A5EDD9B00AEFD55 /* CLPixellateEffect.m in Sources */,
 				2F55F00C1A5EDD9B00AEFD55 /* UIView+Frame.m in Sources */,
 				2F55EFFB1A5EDD9B00AEFD55 /* CLEffectBase.m in Sources */,
